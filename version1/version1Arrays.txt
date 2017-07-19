@@ -1,0 +1,19 @@
+//it should have a place to store todos
+
+var todos = ['item 1', 'item 2', 'item 3']
+
+//it should have a way to display todos
+
+console.log(todos)
+
+//it should have a way to add todos
+
+todos.push()
+
+//it should have a way to change todos
+
+todos[i] = ''
+
+//it should have a way to delete todos
+
+todos.splice(i, 1)
