@@ -1,0 +1,15 @@
+#!/bin/bash
+
+target=()
+
+for ((i = 1; i < 4; i++)); do
+
+    target+=($(curl https://github.com/freeCodeCamp\?page\=$i | grep '<a href="/freeCodeCamp/' | sed -n 's/.*href="\([^"]*\).*/\1/p'))
+    
+done
+
+length=${#targets[@]}
+for ((i = 0; i != length; i++)); do
+    echo "target $i: ${targets[i]}"
+    git clone "https://github.com"${targets[i]}
+done
